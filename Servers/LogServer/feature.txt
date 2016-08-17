@@ -1,0 +1,1 @@
+Receive log and store in db (batching)

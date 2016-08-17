@@ -1,0 +1,5 @@
+Use a UDP connections.
+- Send a message
+- Receive a message
+- Channel (private / global)
+=> store dans une db ?

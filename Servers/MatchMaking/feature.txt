@@ -1,0 +1,3 @@
+TCP Connections
+- choisi un GameServer en fonction du jeu ect
+- si pas de game server compatible on en spawn un nouveau
