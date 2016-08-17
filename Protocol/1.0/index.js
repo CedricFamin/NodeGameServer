@@ -6,5 +6,5 @@ exports.set = function(module)
     module.HandShakeResponse = require('./handShakeResponse.js');
     module.Login             = require('./login.js');
     module.LoginResponse     = require('./loginResponse.js');
-    module.Log               = require('./log.js')
+    module.Log               = require('./log.js');
 }

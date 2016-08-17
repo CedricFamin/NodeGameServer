@@ -1,5 +1,6 @@
 var dgram     = require('dgram');
 var handshake = require('../../Protocol/1.0/handShake.js');
+var logs      = require('../../Protocol/1.0/log.js');
 
 function LogClient(name, address, port)
 {
@@ -21,8 +22,8 @@ LogClient.prototype.constructor = function()
 
 LogClient.prototype.send = function(kind, data)
 {
-    var packetContent = new Buffer(JSON.stringify({ type: kind, content:data}));
-    this._socket.send(packetContent, this._port, this._address);
+    var packet = logs.Create(kind, data);
+    this._socket.send(packet.Buffer(), this._port, this._address);
 };
 
 module.exports.Client = LogClient;

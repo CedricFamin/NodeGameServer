@@ -45,6 +45,18 @@ Packet.prototype.WriteCode = function(code)
     this._buffer.writeInt8(code);
 }
 
+Packet.prototype.WriteBuffer = function(buffer)
+{
+    assert(this._writable);
+    this._buffer.writeBufferNT(buffer);
+}
+
+Packet.prototype.ReadBuffer = function()
+{
+    assert(!this._writable);
+    return this._buffer.readBufferNT();
+}
+
 Packet.prototype.ReadCode = function()
 {
     assert(!this._writable);
