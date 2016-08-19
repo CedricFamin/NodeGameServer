@@ -13,6 +13,7 @@
     "guid": "0.0.12",
     "mongoose": "^4.5.8",
     "multer": "^1.1.0",
+    "node-discover": "^0.6.0",
     "smart-buffer": "^1.0.11"
   },
   "devDependencies": {},
