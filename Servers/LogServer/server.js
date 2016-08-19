@@ -1,5 +1,6 @@
 var server   = require("../server.js");
 var handlers = require('./handlers');
+var Discover = require("node-discover");
 
 var srv = new server.udp(8082);
 srv.log = function(data)
@@ -17,3 +18,5 @@ srv.log = function(data)
 srv.init();
 handlers.set(srv);
 srv.launch();
+
+var d = new Discover({ key : "MMSRV", advertisement:"Logging" });
