@@ -1,5 +1,6 @@
 "use strict";
 
+var args = process.argv.slice(2);
 var server   = require("../server.js");
 var handlers = require('./handlers');
 var Discover = require("node-discover");
@@ -49,7 +50,7 @@ class ConnectionServer extends server.udp
     }
 };
 
-var srv = new ConnectionServer(8081);
+var srv = new ConnectionServer(args[0]);
 srv.init();
 handlers.set(srv);
 srv.launch();
