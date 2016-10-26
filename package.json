@@ -14,6 +14,7 @@
     "mongoose": "^4.5.8",
     "multer": "^1.1.0",
     "node-discover": "^0.6.0",
+    "node-monitor": "^0.3.11",
     "smart-buffer": "^1.0.11"
   },
   "devDependencies": {},

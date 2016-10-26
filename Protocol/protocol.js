@@ -51,6 +51,18 @@ Packet.prototype.WriteBuffer = function(buffer)
     this._buffer.writeBufferNT(buffer);
 }
 
+Packet.prototype.WriteInt = function(value)
+{
+    assert(this._writable);
+    this._buffer.writeUInt32BE(value);
+}
+
+Packet.prototype.ReadInt = function()
+{
+    assert(!this._writable);
+    return this._buffer.readUInt32BE();
+}
+
 Packet.prototype.ReadBuffer = function()
 {
     assert(!this._writable);

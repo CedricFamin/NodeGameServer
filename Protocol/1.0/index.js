@@ -7,4 +7,5 @@ exports.set = function(module)
     module.Login             = require('./login.js');
     module.LoginResponse     = require('./loginResponse.js');
     module.Log               = require('./log.js');
+    module.Hello             = require('./hello.js');
 }
